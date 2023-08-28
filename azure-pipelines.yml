@@ -45,13 +45,6 @@ stages:
     - script: composer install --no-interaction --prefer-dist
       workingDirectory: $(rootFolder)
       displayName: 'Composer install'
-      
-    - script: |
-        mkdir -p ssl
-        sudo chmod -R 775 ssl
-      workingDirectory: $(rootFolder)
-      displayName: 'Create SSL Directory'
-
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
